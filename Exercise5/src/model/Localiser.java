@@ -63,8 +63,8 @@ public class Localiser {
 			}
 		});
 
-		GridMap gridMap = LocalisationUtils.createTrainingMap();
-
+		//GridMap gridMap = LocalisationUtils.createTrainingMap();
+		GridMap gridMap = LocalisationUtils.create2014Map1();
 		// The probability distribution over the robot's location
 		GridPositionDistribution distribution = new GridPositionDistribution(
 				gridMap);
@@ -86,7 +86,7 @@ public class Localiser {
 		while (true) {
 			// Do some action
 			// E.g. attempting to move one node in the PLUS_X direction
-			Heading action = Heading.PLUS_X;
+			Heading action = Heading.MINUS_Y;
 			
 			// I'm faking movement by waiting for some time
 			Delay.msDelay(1000);
